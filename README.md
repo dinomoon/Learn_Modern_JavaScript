@@ -86,3 +86,40 @@ checkScope();
 //Block scope i is: block scope
 //Function scope i is: function scope
 ```
+
+### Declare a Read-Only Variable with the const Keyword
+
+- let과 const의 유일한 차이점: const는 읽기만 가능(변경 불가능)
+- const는 주로 대문자로 선언한다.
+
+```js
+function printManyTimes(str) {
+  "use strict";
+
+  let sentence = str + " is cool!";
+
+  sentence = str + " is amazing!";
+
+  for (let i = 0; i < str.length; i += 2) {
+    console.log(sentence);
+  }
+}
+
+printManyTimes("freeCodeCamp");
+```
+
+```js
+function printManyTimes(str) {
+  "use strict";
+
+  const SENTENCE = str + " is cool!";
+
+  SENTENCE = str + " is amazing!"; // => Error ("SENTENCE" is read-only)
+
+  for (let i = 0; i < str.length; i += 2) {
+    console.log(SENTENCE);
+  }
+}
+
+printManyTimes("freeCodeCamp");
+```
