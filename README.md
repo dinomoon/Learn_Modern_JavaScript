@@ -420,3 +420,21 @@ const half = (function () {
 console.log(stats);
 console.log(half(stats));
 ```
+
+### Write Concise Object Literal Declarations Using Simple Fields
+
+```js
+const createPerson = (name, age, gender) => {
+  return {
+    name: name,
+    age: age,
+    gender: gender,
+  };
+};
+console.log(createPerson("Zodiac Hasbro", 56, "male"));
+```
+
+```js
+const createPerson = (name, age, gender) => ({ name, age, gender });
+console.log(createPerson("Zodiac Hasbro", 56, "male"));
+```
