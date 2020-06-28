@@ -197,3 +197,21 @@ const PI = freezeObj();
 
 console.log(PI); //3.14
 ```
+
+### Use Arrow Functions to Write Concise Anonymous Functions
+
+```js
+var magic = function () {
+  return new Date();
+};
+```
+
+```js
+var magic = () => {
+  return new Date();
+};
+```
+
+```js
+const magic = () => new Date();
+```
