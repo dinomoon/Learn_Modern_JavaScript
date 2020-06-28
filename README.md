@@ -33,3 +33,56 @@ function catTalk() {
 }
 catTalk();
 ```
+
+### Compare Scopes of the var and let Keywords
+
+```js
+function checkScope() {
+  "use strict";
+  var i = "function scope";
+  if (true) {
+    i = "block scope";
+    console.log("Block scope i is: ", i);
+  }
+  console.log("Function scope i is: ", i);
+  return i;
+}
+
+checkScope();
+//Block scope i is: block scope
+//Function scope i is: block scope
+```
+
+```js
+function checkScope() {
+  "use strict";
+  let i = "function scope";
+  if (true) {
+    let i = "block scope";
+    console.log("Block scope i is: ", i);
+  }
+  console.log("Function scope i is: ", i);
+  return i;
+}
+
+checkScope();
+//Block scope i is: block scope
+//Function scope i is: function scope
+```
+
+```js
+function checkScope() {
+  "use strict";
+  // let i = "function scope";
+  if (true) {
+    let i = "block scope";
+    console.log("Block scope i is: ", i);
+  }
+  console.log("Function scope i is: ", i); // => Error (i is not defined)
+  return i;
+}
+
+checkScope();
+//Block scope i is: block scope
+//Function scope i is: function scope
+```
