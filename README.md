@@ -503,3 +503,47 @@ const Vegetable = makeClass();
 const carrot = new Vegetable("carrot");
 console.log(carrot.name); //carrot
 ```
+
+### Use getters and setters to Control Access to an Object
+
+```js
+class Book {
+  constructor(author) {
+    this._author = author;
+  }
+  // getter
+  get writer() {
+    return this._author;
+  }
+  // setter
+  set writer(updatedAuthor) {
+    this._author = updatedAuthor;
+  }
+}
+```
+
+```js
+function makeClass() {
+  class Thermostat {
+    constructor(temp) {
+      this._temp = (5 / 9) * (temp - 32);
+    }
+    // getter
+    get temperature() {
+      return this._temp;
+    }
+    // setter
+    set temperature(updatedTemp) {
+      this._temp = updatedTemp;
+    }
+  }
+
+  return Thermostat;
+}
+
+const Thermostat = makeClass();
+const thermos = new Thermostat(76);
+let temp = thermos.temperature;
+thermos.temperature = 26;
+temp = thermos.temperature;
+```
