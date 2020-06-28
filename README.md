@@ -123,3 +123,31 @@ function printManyTimes(str) {
 
 printManyTimes("freeCodeCamp");
 ```
+
+### Mutate an Array Declared with const
+
+```js
+const s = [5, 7, 2];
+function editInPlace() {
+  "use strict";
+
+  s = [2, 5, 7]; // => Error
+}
+editInPlace();
+
+console.log(s);
+```
+
+```js
+const s = [5, 7, 2];
+function editInPlace() {
+  "use strict";
+
+  s[0] = 2;
+  s[1] = 5;
+  s[2] = 7;
+}
+editInPlace();
+
+console.log(s);
+```
