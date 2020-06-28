@@ -245,7 +245,7 @@ const squareList = (arr) => {
 };
 
 const squaredIntegers = squareList(realNumberArray);
-console.log(squaredIntegers);
+console.log(squaredIntegers); // [16, 1764, 36]
 ```
 
 ### Set Default Parameters for Your Functions
@@ -381,7 +381,7 @@ console.log(arr); // [3, 4, 5, 6, 7, 8, 9, 10]
 console.log(source); // [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 ```
 
-### Use Destructuring Assignment to Pass and Object as a Function`s Parameters
+### Use Destructuring Assignment to Pass an Object as a Function`s Parameters
 
 ```js
 const stats = {
