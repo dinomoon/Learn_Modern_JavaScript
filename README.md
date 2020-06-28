@@ -466,3 +466,40 @@ const bicycle = {
 bicycle.setGear(3);
 console.log(bicycle.gear);
 ```
+
+### Use class Syntax to Define a Constructor Function
+
+```js
+var SpaceShuttle = function (targetPlanet) {
+  this.targetPlanet = targetPlanet;
+};
+var zeus = new SpaceShuttle("Jupiter");
+
+console.log(zeus.targetPlanet); //Jupiter
+```
+
+```js
+class SpaceShuttle {
+  constructor(targetPlanet) {
+    this.targetPlanet = targetPlanet;
+  }
+}
+var zeus = new SpaceShuttle("Jupiter");
+
+console.log(zeus.targetPlanet); //Jupiter
+```
+
+```js
+function makeClass() {
+  class Vegetable {
+    constructor(name) {
+      this.name = name;
+    }
+  }
+
+  return Vegetable;
+}
+const Vegetable = makeClass();
+const carrot = new Vegetable("carrot");
+console.log(carrot.name); //carrot
+```
